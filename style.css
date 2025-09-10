@@ -1,11 +1,95 @@
-display: flex;
-	flex-direction: row;
-	gap: 16px;
-	justify-content: center;
-	align-items: flex-start;
-	padding: 0;
+footer ul {
+	display: inline-flex;
+	align-items: center;
+	gap: 32px;
 	margin: 0;
-	/* Remove misplaced flex styles above */
+}
+
+html {
+		scroll-behavior: smooth;
+		scroll-padding-top: 64px;
+}
+/* Style for 'Connect with me:' text in the footer */
+footer p {
+	font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+	font-size: 1.22em;
+	font-weight: 700;
+		color: #888;
+	margin-bottom: 8px;
+	letter-spacing: 1px;
+	text-shadow: 0 2px 8px rgba(67,233,123,0.10);
+}
+footer p {
+	font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+	font-size: 1.22em;
+	font-weight: 700;
+	color: #43e97b;
+	margin-bottom: 8px;
+	letter-spacing: 1px;
+	text-shadow: 0 2px 8px rgba(67,233,123,0.10);
+}
+
+#hero h1:hover {
+	color: #43e97b;
+	letter-spacing: 2px;
+	transform: scale(1.04);
+}
+/* Prevent hover effects on 'Researching me?' sentence */
+.no-anim:hover, .no-anim:focus {
+	color: inherit !important;
+	background: none !important;
+	transform: none !important;
+	box-shadow: none !important;
+	text-decoration: none !important;
+}
+/* Horizontal Navigation Bar Styles */
+#navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #eafaf1;
+	box-shadow: 0 2px 12px rgba(67,233,123,0.10);
+	z-index: 10000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 56px;
+}
+#navbar ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 32px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#navbar li {
+	font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+	font-size: 1.08em;
+	font-weight: 600;
+}
+#navbar a {
+		color: #222;
+		text-decoration: none;
+		padding: 8px 16px;
+		border-radius: 16px;
+		transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+		font-weight: 600;
+}
+#navbar a:hover, #navbar a:focus {
+			background: rgba(67,233,123,0.18);
+			color: #444;
+			box-shadow: 0 2px 8px rgba(67,233,123,0.12);
+}
+/* Remove animation from 'Researching me?' part */
+.no-anim {
+	animation: none !important;
+	opacity: 1 !important;
+}
+/* Removed misplaced flex styles above */
 /* Project card hover effect */
 .project-card {
 		position: relative;
@@ -13,51 +97,49 @@ display: flex;
 	background: #fff;
 	border-radius: 12px;
 	box-shadow: 0 2px 8px rgba(67,233,123,0.10);
-	padding: 8px 12px;
-	font-size: 1.08em;
-	cursor: pointer;
-	transition: box-shadow 0.2s;
-	overflow: visible;
-	min-width: 140px;
-	max-width: 180px;
-	margin: 0 4px;
-	height: 48px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+		text-align: center;
+		padding: 24px 0 16px 0;
+		background: #eafaf1;
+		color: #222;
+		font-size: 1.08em;
+		border-radius: 0 0 16px 16px;
+		margin-top: 32px;
+		font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+		box-shadow: none;
+		border: none;
 
 }
 
 .project-title {
-		font-weight: bold;
-		color: #222;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
+			font-weight: bold;
+			color: #222;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			transition: opacity 0.3s;
+	white-space: normal;
+	overflow: visible;
+	text-overflow: clip;
+	opacity: 1;
 }
 
 .project-desc {
-					position: absolute;
-					left: 0;
-					top: 100%;
-					width: 100%;
-					max-height: 0;
-					opacity: 0;
-					overflow: hidden;
-					transition: max-height 0.3s ease, opacity 0.3s ease;
-					background: #eafaf1;
-					margin-top: 0;
-					padding: 0 8px;
-					border-radius: 8px;
-						z-index: 1000;
-						background: #fff;
-						box-shadow: 0 8px 24px rgba(67,233,123,0.18), 0 0 0 2px #eafaf1;
+								width: 100%;
+								max-height: 0;
+								opacity: 0;
+								overflow: hidden;
+								transition: max-height 0.3s ease, opacity 0.3s ease;
+								background: #fff;
+								margin-top: 0;
+								padding: 0 16px;
+								border-radius: 0 0 8px 8px;
+								z-index: 1;
 }
 
 .project-card:hover .project-desc {
-					max-height: 120px;
-					opacity: 1;
-					padding: 8px 8px;
+								max-height: 500px;
+								opacity: 1;
+								padding: 12px 16px;
 /* Close button for project popup */
 .project-desc .close-btn {
 	position: absolute;
@@ -77,17 +159,58 @@ display: flex;
 	box-shadow: 0 2px 8px rgba(67,233,123,0.10);
 	z-index: 10000;
 }
-}
 /* Apple-inspired professional look */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap');
 
 body {
-	margin: 0;
-	font-family: 'Inter', 'San Francisco', 'Arial', sans-serif;
-	background: #f5f5f5;
-	color: #222;
-	font-size: 1.25em;
-	line-height: 1.7;
+			padding-top: 56px;
+/* ...existing code... */
+		color: #222;
+		font-size: 1.25em;
+		line-height: 1.7;
+			animation: bgMove 8s ease-in-out infinite alternate;
+			position: relative;
+			overflow-x: hidden;
+		}
+
+		@keyframes bgMove {
+			0% {
+				background-position: 0% 50%;
+			}
+			100% {
+				background-position: 100% 50%;
+			}
+		}
+
+/* Accent shapes for background */
+.accent-shape {
+	position: absolute;
+	border-radius: 50%;
+	opacity: 0.12;
+	pointer-events: none;
+	z-index: 0;
+}
+.accent-green {
+	width: 220px;
+	height: 220px;
+	background: #43e97b;
+	top: 8vh;
+	left: 4vw;
+}
+.accent-white {
+	width: 160px;
+	height: 160px;
+	background: #fff;
+	top: 70vh;
+	left: 80vw;
+}
+.accent-green2 {
+	width: 120px;
+	height: 120px;
+	background: #43e97b;
+	top: 40vh;
+	left: 60vw;
+}
 }
 
 
@@ -103,19 +226,73 @@ section {
 		box-shadow: none;
 		background: #eafaf1;
 		border-bottom: 1px solid #eaeaea;
-		animation: fadeInUp 0.8s ease;
-	}
+						animation: fadeInSection 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+						opacity: 0;
+						animation-fill-mode: forwards;
+				}
 
-	@keyframes fadeInUp {
-		from {
-			opacity: 0;
-			transform: translateY(30px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
+				section.visible {
+						opacity: 1;
+				}
+
+				@keyframes fadeInUp {
+					}
+
+					@keyframes fadeInSection {
+						0% {
+							opacity: 0;
+							transform: translateY(32px) scale(0.98);
+						}
+						80% {
+							opacity: 1;
+							transform: translateY(0) scale(1.01);
+						}
+						100% {
+							opacity: 1;
+							transform: translateY(0) scale(1);
+						}
+				}
+
+				.accent-shape {
+						animation: floatAccent 14s cubic-bezier(0.22, 1, 0.36, 1) infinite alternate;
+				}
+
+				@keyframes bounceShape {
+					}
+
+					@keyframes floatAccent {
+						0% { transform: translateY(0) scale(1); }
+						60% { transform: translateY(-12px) scale(1.03); }
+						100% { transform: translateY(0) scale(1); }
+				}
+
+				h1, h2, h3 {
+						position: relative;
+						transition: color 0.3s;
+					}
+					h1::after, h2::after, h3::after {
+						content: '';
+						display: block;
+						position: absolute;
+						left: 50%;
+						bottom: -8px;
+						width: 0;
+						height: 3px;
+						background: #43e97b;
+						border-radius: 2px;
+						transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1), left 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+					}
+					h1:hover::after, h2:hover::after, h3:hover::after {
+						width: 60%;
+						left: 20%;
+					}
+					h1:hover, h2:hover, h3:hover {
+						color: #43e97b;
+				}
+				h1:hover, h2:hover, h3:hover {
+					transform: scale(1.06);
+					color: #43e97b;
+				}
 	/* Classy and animated list styles for skills, projects, and artists */
 	/* Show skills and projects side by side */
 	.skills-projects-wrapper {
@@ -125,11 +302,7 @@ section {
 			justify-content: flex-start;
 			align-items: center;
 			width: 100%;
-	display: flex;
-	flex-direction: row;
-	gap: 12px;
-	justify-content: center;
-	align-items: center;
+			/* Removed wrapper, not needed anymore */
 	}
 
 	#skills, #projects {
@@ -138,26 +311,28 @@ section {
 			max-width: 300px;
 			padding: 6px 4px 4px 4px;
 		margin: 0;
-		background: #eafaf1;
-		border-radius: 12px;
-		box-shadow: 0 2px 8px rgba(67,233,123,0.10);
+			background: none;
+			border-radius: 0;
+			box-shadow: none;
+		margin-bottom: 12px;
 	}
 
 	#skills ul, #projects ul, #favourite-artists ul {
-		list-style: none;
-		padding: 0;
-		margin: 0 auto;
-		max-width: 340px;
-		display: flex;
-		flex-direction: column;
-		gap: 8px;
+			list-style: none;
+			padding: 0;
+			margin: 0 auto;
+			max-width: 700px;
+			display: flex;
+			flex-direction: row;
+			gap: 24px;
+			justify-content: center;
 	}
 
 /* Display skills horizontally for beginners */
 #skills ul {
   display: flex; /* Arrange skills in a row */
   flex-direction: row;
-  gap: 16px; /* Space between each skill */
+	gap: 8px; /* Space between each skill */
   justify-content: center;
   align-items: flex-start;
   padding: 0;
@@ -168,7 +343,7 @@ section {
 #projects ul {
   display: flex; /* Arrange project cards in a row */
   flex-direction: row;
-  gap: 16px; /* Space between each project card */
+	gap: 8px; /* Space between each project card */
   justify-content: center;
   align-items: flex-start;
   padding: 0;
@@ -176,13 +351,16 @@ section {
 }
 
 #skills li, #projects li {
-		background: #fff;
-		border-radius: 16px;
-		box-shadow: 0 2px 12px rgba(67,233,123,0.10);
-		padding: 32px 32px 24px 32px;
-		margin: 32px auto;
-		max-width: 700px;
-		animation: fadeInUp 0.8s ease;
+			background: #fff;
+			border-radius: 16px;
+			box-shadow: 0 2px 12px rgba(67,233,123,0.10);
+			padding: 32px 32px 24px 32px;
+			margin: 32px auto;
+			max-width: 700px;
+			animation: fadeInUp 0.8s ease;
+			font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+			font-size: 1.08em;
+			font-weight: 500;
 	}
 
 	#about h2 {
@@ -211,16 +389,17 @@ section {
 }
 
 #favourite-artists li {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	background: #fff;
-	border-radius: 12px;
-	box-shadow: 0 2px 8px rgba(67,233,123,0.10);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		background: #fff;
+		border-radius: 12px;
+		box-shadow: 0 2px 8px rgba(67,233,123,0.10);
 		padding: 6px 8px;
 		font-size: 1.05em;
 		margin-bottom: 4px;
-	transition: transform 0.2s, box-shadow 0.2s;
+		transition: transform 0.3s, box-shadow 0.3s;
+		animation: fadeInUp 1s ease;
 }
 
 #favourite-artists li:hover {
@@ -229,14 +408,18 @@ section {
 }
 
 #favourite-artists img {
-	width: 48px;
-	height: 48px;
-	border-radius: 12px;
-	margin-right: 18px;
-	vertical-align: middle;
-	border: 2px solid #43e97b;
-	box-shadow: 0 2px 8px rgba(67,233,123,0.10);
-	object-fit: cover;
+		width: 48px;
+		height: 48px;
+		border-radius: 12px;
+		margin-right: 18px;
+		vertical-align: middle;
+		border: none;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+		object-fit: cover;
+		transition: box-shadow 0.3s, transform 0.3s, filter 0.3s;
+		transform: scale(1.15);
+	filter: brightness(1.1) saturate(1.3) drop-shadow(0 0 8px #43e97b);
+	box-shadow: 0 8px 24px rgba(67,233,123,0.18), 0 0 0 2px #eafaf1;
 }
 
 
@@ -323,27 +506,57 @@ section {
 
 
 #about, #skills, #projects, #favourite-artists {
-	background: #fff;
+		background: #fff;
+	}
+
+	#favourite-artists {
+			margin-bottom: 180px;
 }
 
 footer {
-	text-align: center;
-	padding: 20px;
-			flex: 0 0 40%;
-			width: 40%;
-			height: 100%;
-			object-fit: cover;
-			border-radius: 0;
-			margin-left: 40px;
-			border: none;
-			box-shadow: none;
-			background: transparent;
-			max-width: none;
-			max-height: none;
-			min-width: 220px;
-			min-height: 220px;
-				align-self: center;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background: #eafaf1;
+		color: #222;
+		text-align: center;
+		padding: 24px 0 16px 0;
+		font-size: 1.08em;
+		font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+		box-shadow: 0 -2px 12px rgba(67,233,123,0.10);
+		border: none;
+		z-index: 10000;
+		transition: box-shadow 0.3s, background 0.3s;
 }
+/* ...existing code... */
+
+		footer li a {
+				transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+				border-radius: 16px;
+				padding: 4px 12px;
+		}
+
+		footer li a:hover {
+				background: rgba(67,233,123,0.18);
+				color: #444 !important;
+				box-shadow: 0 2px 8px rgba(67,233,123,0.12);
+		}
+
+		footer li a:hover .fa-linkedin {
+			color: #0a66c2;
+			background: #fff;
+			border-radius: 50%;
+			padding: 2px;
+		}
+
+		footer li a:hover .fa-instagram {
+			color: #e1306c;
+			background: #fff;
+			border-radius: 50%;
+			padding: 2px;
+		}
+
 .fa-brands, .fa-solid {
 	margin-left: 8px;
 	font-size: 1.2em;

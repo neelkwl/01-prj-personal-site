@@ -10,6 +10,17 @@
 </head>
 
 <body>
+  <!-- Navigation Bar -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#favourite-artists">Artists</a></li>
+      <li><a href="#footer">Connect</a></li>
+    </ul>
+  </nav>
   <!-- Hero Section: This is the top part of your portfolio -->
   <section id="hero">
     <div id="hero-text">
@@ -17,7 +28,7 @@
         <span class="hi">Hi,</span>
         <span class="name">I'm Neel Khandelwal</span>
       </h1>
-      <h3>Researching me? Let this website be your guide</h3>
+  <h3 class="no-anim">Researching me? Let this website be your guide</h3>
     </div>
     <img src="img/me.jpg" alt="My Photo">
   </section>
@@ -29,47 +40,45 @@
   Built high-performance tools in Python/C++ (sub-second runtimes, &gt;90% accuracy, 60%+ efficiency gains).<br>
   Pursuing global AI certifications (Intel, L’Oréal, UNESCO, OpenAI).<br>
   Seeking software engineering roles to deliver scalable solutions and measurable impact.</p>
-  <!-- Skills and Projects side by side -->
-  <div class="skills-projects-wrapper">
-    <!-- Skills Section: Displayed horizontally above projects -->
-    <section id="skills">
-      <h2>My Skills</h2>
-      <ul>
-        <li>Python <i class="fa-brands fa-python"></i></li>
-        <li>C++ <i class="fa-solid fa-code"></i></li>
-        <li>HTML <i class="fa-brands fa-html5"></i></li>
-        <li>CSS <i class="fa-brands fa-css3-alt"></i></li>
-        <li>JavaScript <i class="fa-brands fa-js"></i></li>
-        <!-- Add more skills as you learn -->
-      </ul>
-    </section>
-    <!-- Projects Section: Displayed horizontally below skills -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li class="project-card">
-          <div class="project-title">Rubik’s Cube Solver (C++/Python)</div>
-          <div class="project-desc">Implemented Kociemba solver with reverse-BFS PDBs and IDA*; solved scrambles in &lt;1s while reducing memory by 60%.</div>
-        </li>
-        <li class="project-card">
-          <div class="project-title">Financial Web Scraper (Python)</div>
-          <div class="project-desc">Automated stock data for 200+ companies; produced reports cutting analysis time by 50%+.</div>
-        </li>
-        <li class="project-card">
-          <div class="project-title">Robotic Hand (OpenCV)</div>
-          <div class="project-desc">Designed gesture-controlled robotic arm with Bluetooth; achieved 95% articulation accuracy.</div>
-        </li>
-        <li class="project-card">
-          <div class="project-title">Sign Language Translator (OpenCV)</div>
-          <div class="project-desc">Built real-time pipeline, reaching &gt;90% accuracy on 30+ signs.</div>
-        </li>
-        <li class="project-card">
-          <div class="project-title">Gesture-Based PC Control (OpenCV)</div>
-          <div class="project-desc">Developed hand-tracking interface with &lt;50ms latency, enabling accessible OS interaction.</div>
-        </li>
-      </ul>
-    </section>
-  </div>
+  <!-- Skills Section: Displayed horizontally above projects -->
+  <section id="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li>Python <i class="fa-brands fa-python"></i></li>
+      <li>C++ <i class="fa-solid fa-code"></i></li>
+      <li>HTML <i class="fa-brands fa-html5"></i></li>
+      <li>CSS <i class="fa-brands fa-css3-alt"></i></li>
+      <li>JavaScript <i class="fa-brands fa-js"></i></li>
+      <!-- Add more skills as you learn -->
+    </ul>
+  </section>
+
+  <!-- Projects Section: Displayed horizontally below skills -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li class="project-card">
+        <div class="project-title">Rubik’s Cube Solver (C++/Python)</div>
+        <div class="project-desc">Implemented Kociemba solver with reverse-BFS PDBs and IDA*; solved scrambles in &lt;1s while reducing memory by 60%.</div>
+      </li>
+      <li class="project-card">
+        <div class="project-title">Financial Web Scraper (Python)</div>
+        <div class="project-desc">Automated stock data for 200+ companies; produced reports cutting analysis time by 50%+.</div>
+      </li>
+      <li class="project-card">
+        <div class="project-title">Robotic Hand (OpenCV)</div>
+        <div class="project-desc">Designed gesture-controlled robotic arm with Bluetooth; achieved 95% articulation accuracy.</div>
+      </li>
+      <li class="project-card">
+        <div class="project-title">Sign Language Translator (OpenCV)</div>
+        <div class="project-desc">Built real-time pipeline, reaching &gt;90% accuracy on 30+ signs.</div>
+      </li>
+      <li class="project-card">
+        <div class="project-title">Gesture-Based PC Control (OpenCV)</div>
+        <div class="project-desc">Developed hand-tracking interface with &lt;50ms latency, enabling accessible OS interaction.</div>
+      </li>
+    </ul>
+  </section>
 
   <!-- Favourite Artists Section -->
   <section id="favourite-artists">
@@ -85,16 +94,24 @@
   <!-- You can add more sections below, like Projects or Contact -->
   
   <!-- Footer Section: Social media handles -->
-  <footer>
-    <p>Connect with me:</p>
-    <ul>
-      <li>
-        <a href="https://www.linkedin.com/in/neel-khandelwal-a11178332" target="_blank">LinkedIn: neel.khandelwal</a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/neel.khandelwal_" target="_blank">Instagram: neel.khandelwal_</a>
-      </li>
-    </ul>
+  <footer id="footer">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 32px;">
+      <p style="margin: 0 24px 0 0; font-family: 'Montserrat', 'Inter', Arial, sans-serif; font-size: 1.22em; font-weight: 700; color: #515653; letter-spacing: 1px; text-shadow: 0 2px 8px rgba(67,233,123,0.10);">Connect with me:</p>
+      <ul style="list-style:none; padding:0; margin:0; display:flex; align-items:center; gap:32px;">
+        <li style="display:flex; align-items:center; font-family:'Montserrat','Inter',Arial,sans-serif; font-size:1.18em; font-weight:700; color:#43e97b;">
+          <a href="https://www.linkedin.com/in/neel-khandelwal-a11178332" target="_blank" style="color:inherit; text-decoration:none; display:flex; align-items:center;">
+            <i class="fa-brands fa-linkedin" aria-hidden="true" style="margin-right:8px; font-size:1.3em;"></i>
+            LinkedIn: neel.khandelwal
+          </a>
+        </li>
+        <li style="display:flex; align-items:center; font-family:'Montserrat','Inter',Arial,sans-serif; font-size:1.18em; font-weight:700; color:#43e97b;">
+          <a href="https://www.instagram.com/neel.khandelwal_" target="_blank" style="color:inherit; text-decoration:none; display:flex; align-items:center;">
+            <i class="fa-brands fa-instagram" aria-hidden="true" style="margin-right:8px; font-size:1.3em;"></i>
+            Instagram: neel.khandelwal_
+          </a>
+        </li>
+      </ul>
+    </div>
   </footer>
 </body>
 </html>
