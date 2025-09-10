@@ -1,1 +1,350 @@
-/* Add you CSS here */
+display: flex;
+	flex-direction: row;
+	gap: 16px;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 0;
+	margin: 0;
+	/* Remove misplaced flex styles above */
+/* Project card hover effect */
+.project-card {
+		position: relative;
+	z-index: 1001;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(67,233,123,0.10);
+	padding: 8px 12px;
+	font-size: 1.08em;
+	cursor: pointer;
+	transition: box-shadow 0.2s;
+	overflow: visible;
+	min-width: 140px;
+	max-width: 180px;
+	margin: 0 4px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.project-title {
+		font-weight: bold;
+		color: #222;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+}
+
+.project-desc {
+					position: absolute;
+					left: 0;
+					top: 100%;
+					width: 100%;
+					max-height: 0;
+					opacity: 0;
+					overflow: hidden;
+					transition: max-height 0.3s ease, opacity 0.3s ease;
+					background: #eafaf1;
+					margin-top: 0;
+					padding: 0 8px;
+					border-radius: 8px;
+						z-index: 1000;
+						background: #fff;
+						box-shadow: 0 8px 24px rgba(67,233,123,0.18), 0 0 0 2px #eafaf1;
+}
+
+.project-card:hover .project-desc {
+					max-height: 120px;
+					opacity: 1;
+					padding: 8px 8px;
+/* Close button for project popup */
+.project-desc .close-btn {
+	position: absolute;
+	top: 12px;
+	right: 16px;
+	background: #43e97b;
+	color: #fff;
+	border: none;
+	border-radius: 50%;
+	width: 28px;
+	height: 28px;
+	font-size: 1.2em;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 2px 8px rgba(67,233,123,0.10);
+	z-index: 10000;
+}
+}
+/* Apple-inspired professional look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap');
+
+body {
+	margin: 0;
+	font-family: 'Inter', 'San Francisco', 'Arial', sans-serif;
+	background: #f5f5f5;
+	color: #222;
+	font-size: 1.25em;
+	line-height: 1.7;
+}
+
+
+section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+			padding: 10px 4px 0 4px;
+		margin: 0;
+		border-radius: 0;
+		box-shadow: none;
+		background: #eafaf1;
+		border-bottom: 1px solid #eaeaea;
+		animation: fadeInUp 0.8s ease;
+	}
+
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	/* Classy and animated list styles for skills, projects, and artists */
+	/* Show skills and projects side by side */
+	.skills-projects-wrapper {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			justify-content: flex-start;
+			align-items: center;
+			width: 100%;
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+	justify-content: center;
+	align-items: center;
+	}
+
+	#skills, #projects {
+		flex: 1 1 0;
+			min-width: 180px;
+			max-width: 300px;
+			padding: 6px 4px 4px 4px;
+		margin: 0;
+		background: #eafaf1;
+		border-radius: 12px;
+		box-shadow: 0 2px 8px rgba(67,233,123,0.10);
+	}
+
+	#skills ul, #projects ul, #favourite-artists ul {
+		list-style: none;
+		padding: 0;
+		margin: 0 auto;
+		max-width: 340px;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+/* Display skills horizontally for beginners */
+#skills ul {
+  display: flex; /* Arrange skills in a row */
+  flex-direction: row;
+  gap: 16px; /* Space between each skill */
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+/* Display project cards horizontally for beginners */
+#projects ul {
+  display: flex; /* Arrange project cards in a row */
+  flex-direction: row;
+  gap: 16px; /* Space between each project card */
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+#skills li, #projects li {
+		background: #fff;
+		border-radius: 16px;
+		box-shadow: 0 2px 12px rgba(67,233,123,0.10);
+		padding: 32px 32px 24px 32px;
+		margin: 32px auto;
+		max-width: 700px;
+		animation: fadeInUp 0.8s ease;
+	}
+
+	#about h2 {
+		font-size: 2.2em;
+		font-weight: 900;
+		color: #43e97b;
+		margin-bottom: 18px;
+	}
+
+	#about p {
+		font-size: 1.15em;
+		color: #222;
+		line-height: 1.8;
+		margin: 0;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(67,233,123,0.10);
+	padding: 16px 24px;
+	font-size: 1.1em;
+	transition: transform 0.2s, box-shadow 0.2s;
+	text-align: left;
+}
+
+#skills li:hover, #projects li:hover {
+	transform: translateY(-4px) scale(1.03);
+	box-shadow: 0 6px 18px rgba(67,233,123,0.18);
+}
+
+#favourite-artists li {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(67,233,123,0.10);
+		padding: 6px 8px;
+		font-size: 1.05em;
+		margin-bottom: 4px;
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#favourite-artists li:hover {
+	transform: translateY(-4px) scale(1.03);
+	box-shadow: 0 6px 18px rgba(67,233,123,0.18);
+}
+
+#favourite-artists img {
+	width: 48px;
+	height: 48px;
+	border-radius: 12px;
+	margin-right: 18px;
+	vertical-align: middle;
+	border: 2px solid #43e97b;
+	box-shadow: 0 2px 8px rgba(67,233,123,0.10);
+	object-fit: cover;
+}
+
+
+/* Hero section with transparent background image */
+#hero {
+		position: relative;
+				display: flex;
+				flex-direction: row-reverse;
+				align-items: center;
+				justify-content: space-between;
+		padding: 60px 0 0 20px;
+		background: #eafaf1;
+		border-radius: 0;
+		box-shadow: none;
+		min-height: 350px;
+		border-bottom: 1px solid #eaeaea;
+		overflow: hidden;
+}
+
+#hero::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('img/me.jpg') center center/cover no-repeat;
+	opacity: 0.13;
+	z-index: 0;
+}
+
+#hero > * {
+	position: relative;
+	z-index: 1;
+}
+
+
+#hero-text {
+	flex: 1;
+	text-align: left;
+	padding-right: 40px;
+}
+
+ #hero-text h1 {
+  font-size: 3.5em;
+  font-family: 'Inter', 'San Francisco', 'Arial', sans-serif;
+  font-weight: 900;
+  margin: 0 0 18px 0;
+}
+
+#hero-text .hi {
+	color: #fff;
+	background: #43e97b;
+	padding: 0 12px;
+	border-radius: 8px;
+	display: inline-block;
+}
+
+#hero-text .name {
+	color: #222;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+/* Remove frame and shift image left */
+/* Hero image fills the right side, no rounded corners, max size */
+#hero img {
+			flex: 0 0 320px;
+			width: 320px;
+			height: 320px;
+			aspect-ratio: 1 / 1;
+			object-fit: cover;
+			border-radius: 0;
+					margin-right: 40px;
+			border: none;
+			box-shadow: none;
+			background: transparent;
+			max-width: 320px;
+			max-height: 320px;
+			min-width: 220px;
+			min-height: 220px;
+			align-self: flex-start;
+}
+
+
+#about, #skills, #projects, #favourite-artists {
+	background: #fff;
+}
+
+footer {
+	text-align: center;
+	padding: 20px;
+			flex: 0 0 40%;
+			width: 40%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 0;
+			margin-left: 40px;
+			border: none;
+			box-shadow: none;
+			background: transparent;
+			max-width: none;
+			max-height: none;
+			min-width: 220px;
+			min-height: 220px;
+				align-self: center;
+}
+.fa-brands, .fa-solid {
+	margin-left: 8px;
+	font-size: 1.2em;
+}

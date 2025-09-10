@@ -12,51 +12,73 @@
 <body>
   <!-- Hero Section: This is the top part of your portfolio -->
   <section id="hero">
-    <!-- Your profile picture -->
-    <img src="img/me.jpg" alt="My Photo" width="150">
-    <!-- Your name and a short bio -->
-    <h1>Hi, I'm Neel Khandelwal</h1>
-    <h3>Researching me? Let this website be your guide</h3>
+    <div id="hero-text">
+      <h1>
+        <span class="hi">Hi,</span>
+        <span class="name">I'm Neel Khandelwal</span>
+      </h1>
+      <h3>Researching me? Let this website be your guide</h3>
+    </div>
+    <img src="img/me.jpg" alt="My Photo">
   </section>
 
   <section id="about">
-    <h2>About Me</h2>
-    <p>
-      <p>Computer Science undergraduate at the University of Michigan with experience in algorithms, computer vision, and systems design. Built high-performance tools in Python/C++ that achieved sub-second runtimes, &gt;90% accuracy, and 60%+ efficiency gains. Currently pursuing global AI certifications (Intel, L’Oréal, UNESCO, OpenAI). Seeking software engineering roles where I can deliver scalable solutions and measurable impact.</p>
-    </p>
-  <!-- Skills Section: List your skills here -->
-  <section id="skills">
-    <h2>My Skills</h2>
-    <ul>
-  <li>Python <i class="fa-brands fa-python"></i></li>
-  <li>C++ <i class="fa-solid fa-code"></i></li>
-  <li>HTML <i class="fa-brands fa-html5"></i></li>
-  <li>CSS <i class="fa-brands fa-css3-alt"></i></li>
-  <li>JavaScript <i class="fa-brands fa-js"></i></li>
-      <!-- Add more skills as you learn -->
-    </ul>
-  </section>
-
-  <!-- Projects Section: List your projects here -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Rubik’s Cube Solver (C++/Python):</strong> Implemented Kociemba solver with reverse-BFS PDBs and IDA*; solved scrambles in &lt;1s while reducing memory by 60%.</li>
-      <li><strong>Financial Web Scraper (Python):</strong> Automated stock data for 200+ companies; produced reports cutting analysis time by 50%+.</li>
-      <li><strong>Robotic Hand (OpenCV):</strong> Designed gesture-controlled robotic arm with Bluetooth; achieved 95% articulation accuracy.</li>
-      <li><strong>Sign Language Translator (OpenCV):</strong> Built real-time pipeline, reaching &gt;90% accuracy on 30+ signs.</li>
-      <li><strong>Gesture-Based PC Control (OpenCV):</strong> Developed hand-tracking interface with &lt;50ms latency, enabling accessible OS interaction.</li>
-    </ul>
-  </section>
+  <h2>About Me</h2>
+  <p>Computer Science undergraduate at the University of Michigan.<br>
+  Experienced in algorithms, computer vision, and systems design.<br>
+  Built high-performance tools in Python/C++ (sub-second runtimes, &gt;90% accuracy, 60%+ efficiency gains).<br>
+  Pursuing global AI certifications (Intel, L’Oréal, UNESCO, OpenAI).<br>
+  Seeking software engineering roles to deliver scalable solutions and measurable impact.</p>
+  <!-- Skills and Projects side by side -->
+  <div class="skills-projects-wrapper">
+    <!-- Skills Section: Displayed horizontally above projects -->
+    <section id="skills">
+      <h2>My Skills</h2>
+      <ul>
+        <li>Python <i class="fa-brands fa-python"></i></li>
+        <li>C++ <i class="fa-solid fa-code"></i></li>
+        <li>HTML <i class="fa-brands fa-html5"></i></li>
+        <li>CSS <i class="fa-brands fa-css3-alt"></i></li>
+        <li>JavaScript <i class="fa-brands fa-js"></i></li>
+        <!-- Add more skills as you learn -->
+      </ul>
+    </section>
+    <!-- Projects Section: Displayed horizontally below skills -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li class="project-card">
+          <div class="project-title">Rubik’s Cube Solver (C++/Python)</div>
+          <div class="project-desc">Implemented Kociemba solver with reverse-BFS PDBs and IDA*; solved scrambles in &lt;1s while reducing memory by 60%.</div>
+        </li>
+        <li class="project-card">
+          <div class="project-title">Financial Web Scraper (Python)</div>
+          <div class="project-desc">Automated stock data for 200+ companies; produced reports cutting analysis time by 50%+.</div>
+        </li>
+        <li class="project-card">
+          <div class="project-title">Robotic Hand (OpenCV)</div>
+          <div class="project-desc">Designed gesture-controlled robotic arm with Bluetooth; achieved 95% articulation accuracy.</div>
+        </li>
+        <li class="project-card">
+          <div class="project-title">Sign Language Translator (OpenCV)</div>
+          <div class="project-desc">Built real-time pipeline, reaching &gt;90% accuracy on 30+ signs.</div>
+        </li>
+        <li class="project-card">
+          <div class="project-title">Gesture-Based PC Control (OpenCV)</div>
+          <div class="project-desc">Developed hand-tracking interface with &lt;50ms latency, enabling accessible OS interaction.</div>
+        </li>
+      </ul>
+    </section>
+  </div>
 
   <!-- Favourite Artists Section -->
   <section id="favourite-artists">
     <h2>Favourite Artists</h2>
     <ul>
-      <li>Justin Bieber</li>
-      <li>The Weeknd</li>
-      <li>Travis Scott</li>
-      <li>Ariana Grande</li>
+      <li><img src="img/justin bieber.png" alt="Justin Bieber">Justin Bieber</li>
+      <li><img src="img/week d.png" alt="The Weeknd">The Weeknd</li>
+      <li><img src="img/travis.png" alt="Travis Scott">Travis Scott</li>
+      <li><img src="img/ariana.png" alt="Ariana Grande">Ariana Grande</li>
     </ul>
   </section>
 
